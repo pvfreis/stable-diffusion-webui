@@ -8,11 +8,16 @@ from PIL import Image, PngImagePlugin
 
 url = "http://127.0.0.1:7861"
 
-prompts = ["1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", ]  # Add more prompts as needed
+prompts = ["1boy", "1girl", "1dog", "1cat"]  # Add more prompts as needed
 
 # Create a timestamped folder
 timestamp = time.strftime("%H-%M-%S")
-os.makedirs(timestamp, exist_ok=True)
+folder_name = os.path.join("out", timestamp)
+folder_path = os.path.join(os.getcwd(), folder_name)
+os.makedirs(folder_path, exist_ok=True)
+
+print(f"Current working directory: {os.getcwd()}")  # Print the current working directory
+print(f"Saving images in folder: {folder_path}")    # Print the folder path
 
 for prompt in prompts:
     payload = {
@@ -27,7 +32,7 @@ for prompt in prompts:
             response.raise_for_status()
             break
         except requests.exceptions.RequestException as e:
-            print(f"Service not available yet: Trying again in 5 seconds...")
+            print(f"Service not available yet: {e}")
             time.sleep(5)  # Wait for 5 seconds before retrying
 
     r = response.json()
@@ -44,5 +49,5 @@ for prompt in prompts:
         pnginfo.add_text("parameters", response2.json().get("info"))
 
         # Save the images with different filenames in the timestamped folder
-        image_filename = f"out/{timestamp}/{prompt}_{i}.png"
+        image_filename = os.path.join(folder_path, f"{prompt}_{i}.png")
         image.save(image_filename, pnginfo=pnginfo)
