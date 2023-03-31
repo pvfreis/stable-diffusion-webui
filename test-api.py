@@ -27,7 +27,7 @@ for prompt in prompts:
             response.raise_for_status()
             break
         except requests.exceptions.RequestException as e:
-            print(f"Service not available yet: {e}")
+            print(f"Service not available yet: Trying again in 5 seconds...")
             time.sleep(5)  # Wait for 5 seconds before retrying
 
     r = response.json()
