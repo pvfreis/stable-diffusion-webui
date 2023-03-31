@@ -7,7 +7,7 @@ from PIL import Image, PngImagePlugin
 url = "http://127.0.0.1:7860"
 
 payload = {
-    "prompt": "1boy, pvfrlao <lora:pvfrlao:1>",
+    "prompt": "1boy",
     "steps": 25,
     "sampler_index":'DPM++ 2M Karras',
 }
