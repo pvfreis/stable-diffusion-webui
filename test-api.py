@@ -34,4 +34,4 @@ for i in r['images']:
 
     pnginfo = PngImagePlugin.PngInfo()
     pnginfo.add_text("parameters", response2.json().get("info"))
-    image.save('var/meadowrun/code0/test/output.png', pnginfo=pnginfo)
+    image.save('test/output.png', pnginfo=pnginfo)
