@@ -8,7 +8,7 @@ from PIL import Image, PngImagePlugin
 
 url = "http://127.0.0.1:7861"
 
-prompts = ["1boy", "1girl", "1dog", "1cat"]  # Add more prompts as needed
+prompts = ["1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", "1boy", "1girl", "1dog", "1cat", ]  # Add more prompts as needed
 
 # Create a timestamped folder
 timestamp = time.strftime("%H-%M-%S")
