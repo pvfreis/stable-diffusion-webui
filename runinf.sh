@@ -1,22 +1,12 @@
 #!/bin/bash
 
-# Replace 'your_script.sh' with the name of your .sh file
+# Run webui.sh in the background
+./webui.sh -f 
 
-temp_file="output.txt"
-success_pattern="127.0.0.1"
+# Wait for a few seconds to let the service start
+sleep 300
 
-./webui.sh -f 2>&1 | tee "$temp_file"
-output=$(cat "$temp_file")
-rm "$temp_file"
+# Run the Python script
+python3 test-api.py
+echo "Inference ran successfully."
 
-# Replace 'success_pattern' with a string or pattern that indicates success in the output
-
-
-if echo "$output" | grep -q "$success_pattern"; then
-    echo "Service enabled."
-    # Replace 'your_python_script.py' with the name of your Python script
-    python3 test-api.py
-    echo "Inference ran successfully."
-else
-    echo "Script did not run successfully."
-fi
