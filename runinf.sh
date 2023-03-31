@@ -3,7 +3,7 @@
 # Run webui.sh in the background
 ./webui.sh -f 
 
-# Wait for a few seconds to let the service start
+# Wait 5 minutes to let the service start
 sleep 300
 
 # Run the Python script

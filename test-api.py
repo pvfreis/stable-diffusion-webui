@@ -2,6 +2,7 @@ import json
 import requests
 import io
 import base64
+import time
 from PIL import Image, PngImagePlugin
 
 url = "http://127.0.0.1:7860"
@@ -12,9 +13,14 @@ payload = {
     "sampler_index":'DPM++ 2M Karras',
 }
 
-
-
-response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
+while True:
+    try:
+        response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
+        response.raise_for_status()
+        break
+    except requests.exceptions.RequestException as e:
+        print(f"Service not available yet: {e}")
+        time.sleep(5)  # Wait for 5 seconds before retrying
 
 r = response.json()
 
