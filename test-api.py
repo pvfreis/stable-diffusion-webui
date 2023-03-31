@@ -34,4 +34,4 @@ for i in r['images']:
 
     pnginfo = PngImagePlugin.PngInfo()
     pnginfo.add_text("parameters", response2.json().get("info"))
-    image.save('/test-out/output.png', pnginfo=pnginfo)
+    image.save('code0/test-out/output.png', pnginfo=pnginfo)
