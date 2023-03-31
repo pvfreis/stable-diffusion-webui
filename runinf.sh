@@ -2,7 +2,7 @@
 
 # Replace 'your_script.sh' with the name of your .sh file
 
-./webui-user.sh 2>&1 | tee "$temp_file"
+./webui.sh -f 2>&1 | tee "$temp_file"
 output=$(cat "$temp_file")
 rm "$temp_file"
 
