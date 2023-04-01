@@ -26,6 +26,15 @@ for prompt in prompts:
         "sampler_index": 'DPM++ 2M Karras',
     }
 
+    highres_payload = {
+                    "enable_hr": True,
+                    "hr_upscaler": "Latent",
+                    "hr_scale": 1,
+                    "hr_second_pass_steps": 12,
+                    "denoising_strength": 0.5,
+    }
+    payload.update(highres_payload)
+
     while True:
         try:
             response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
