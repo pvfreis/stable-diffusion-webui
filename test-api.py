@@ -8,7 +8,67 @@ from PIL import Image, PngImagePlugin
 
 url = "http://127.0.0.1:7861"
 
-prompts = ["1boy", "1girl", "1dog", "1cat"]  # Add more prompts as needed
+
+prompts = ["a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",
+            "a portrait face closeup of a man as fantasy character, Concept art, fine art, highly detailed, extremely detailed, beautiful composition, trending on deviantart by Greg Rutkowski and artgerm",]  # Add more prompts as needed
 
 # Create a timestamped folder
 timestamp = time.strftime("%H-%M-%S")
@@ -24,6 +84,7 @@ for prompt in prompts:
         "prompt": prompt,
         "steps": 25,
         "sampler_index": 'DPM++ 2M Karras',
+        "seed": -1,
     }
 
     highres_payload = {
@@ -45,6 +106,7 @@ for prompt in prompts:
             time.sleep(10)  # Wait for 5 seconds before retrying
 
     r = response.json()
+    start_time = time.time()
 
     for i, img_data in enumerate(r['images']):
         image = Image.open(io.BytesIO(base64.b64decode(img_data.split(",", 1)[0])))
@@ -60,3 +122,7 @@ for prompt in prompts:
         # Save the images with different filenames in the timestamped folder
         image_filename = os.path.join(folder_path, f"{prompt}_{i}.png")
         image.save(image_filename, pnginfo=pnginfo)
+    
+end_time = time.time()  # End time
+elapsed_time = end_time - start_time  # Calculate elapsed time
+print(f"Time taken for inference of all images: {elapsed_time:.2f} seconds")  # Print the elapsed time
