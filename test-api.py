@@ -79,7 +79,7 @@ os.makedirs(folder_path, exist_ok=True)
 print(f"Current working directory: {os.getcwd()}")  # Print the current working directory
 print(f"Saving images in folder: {folder_path}")    # Print the folder path
 
-for index, prompt in prompts:
+for index, prompt in enumerate(prompts):
     payload = {
         "prompt": prompt,
         "steps": 25,
