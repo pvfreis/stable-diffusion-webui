@@ -79,7 +79,7 @@ os.makedirs(folder_path, exist_ok=True)
 print(f"Current working directory: {os.getcwd()}")  # Print the current working directory
 print(f"Saving images in folder: {folder_path}")    # Print the folder path
 
-for prompt in prompts:
+for index, prompt in prompts:
     payload = {
         "prompt": prompt,
         "steps": 25,
@@ -120,7 +120,7 @@ for prompt in prompts:
         pnginfo.add_text("parameters", response2.json().get("info"))
 
         # Save the images with different filenames in the timestamped folder
-        image_filename = os.path.join(folder_path, f"{prompt}_{i}.png")
+        image_filename = os.path.join(folder_path, f"{prompt}_{index}_{i}.png")
         image.save(image_filename, pnginfo=pnginfo)
     
 end_time = time.time()  # End time
